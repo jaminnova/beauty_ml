@@ -1,5 +1,5 @@
+import 'package:beauty_ml/FaceMeasurementPage.dart';
 import 'package:flutter/material.dart';
-import 'face_animation_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,18 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Selfie Animation Demo',
+      title: 'Selfie Animation',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text('Selfie Animation')),
         body: Center(
-          child: FaceAnimationWidget(
-            onAnimationComplete: () {
-              print('Animation completed!');
-            },
-          ),
+          child: FaceMeasurementPage(),
         ),
       ),
     );
